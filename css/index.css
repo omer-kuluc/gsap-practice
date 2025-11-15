@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  font-family: "Roboto";
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #1f1d1d;
+  min-height: 100vh;
+  padding-top: 75px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-bottom: 25px;
+}
+
+.intro-text {
+  font-size: 1.8em;
+  color: white;
+}
+
+
+
+/* 1. Merkezi referans alarak dönen saat okları */
+
+
+/*ek*/
+
+.fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.fullscreen img,
+.volvo-info img,
+.aston-martin-info img {
+  will-change: transform;
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+}
+
+h1 {
+  will-change: transform;
+  margin: 0;
+  font-size: 300vw;
+  text-transform: uppercase;
+}
+
+.dark h1 {
+  color: #fff;
+}
+
+.dark {
+  background: #000;
+}
+
+.blendImage {
+  transform: scale(2);
+  mix-blend-mode: darken;
+}
+
+.bg {
+  transform: scale(2);
+}
+
+.effect {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+
+}
+
+.impala-info {
+  color: #fff;
+  font-size: 40px;
+  z-index: 3;
+  margin-bottom: 400px;
+  margin-left: 350px;
+
+}
+
+.volvo-info,
+.aston-martin-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 668px;
+  background: #000;
+}
+
+.aston-martin-info {
+  margin-top: 1551px;
+
+}
+
+
+
+@media (width >=768px) {
+
+  .intro-text {
+    font-size: 2.5em;
+  }
+
+  .volvo-info {
+    margin-top: 737px;
+
+  }
+
+  .aston-martin-info {
+    margin-top: 1620px;
+  }
+
+
+}
+
+@media (width>=1110px) {
+
+  .aston-martin-info {
+    margin-top: 1749px;
+
+  }
+
+}
+
+
+
+
+@media (width> 1800px) {
+  .volvo-info {
+    margin-top: 953px;
+
+  }
+
+  .aston-martin-info {
+    margin-top: 2220px;
+
+  }
+
+}
