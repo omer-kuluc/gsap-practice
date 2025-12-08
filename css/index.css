@@ -146,22 +146,53 @@ h1 {
 }
 
 
-.volvo-info,
-.aston-martin-info {
+/*card-text-animationmobil-start*/
+
+.impala-info {
+  z-index: 3;
   display: flex;
-  align-items: center;
+  justify-content: start;
+}
+
+.car-info-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #000;
+  padding: 15px;
+  margin-bottom: 500px;
+}
+
+.brand-text,
+.model-text,
+.year-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin-top: 668px;
-  background: #000;
+  align-items: center;
+  gap: 20px;
 }
 
-.aston-martin-info {
-  margin-top: 1551px;
-
+.card-header {
+  font-size: 16px;
+  color: rgb(252, 252, 252);
 }
+
+p {
+  color: rgb(236, 241, 245);
+  font-size: 12px;
+}
+
+/*text-animation*/
+.new {
+  color: rgb(106, 212, 216);
+  font-size: 12px;
+  align-self: center;
+}
+
+/*card-text-animation-mobil*/
 
 
 
@@ -171,25 +202,40 @@ h1 {
     font-size: 2.5em;
   }
 
-  .volvo-info {
-    margin-top: 737px;
+  .car-info-card {
+    width: 250px;
+    height: 125px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 150px;
+    margin-right: 475px;
 
   }
 
-  .aston-martin-info {
-    margin-top: 1620px;
+  .brand-text,
+  .model-text,
+  .year-text {
+    gap: 25px;
+  }
+
+  .card-header {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /*text-animation*/
+  .new {
+    font-size: 16px;
+    color: rgb(106, 212, 216);
   }
 
 
 }
 
 @media (width>=1280px) {
-
-  .aston-martin-info {
-    margin-top: 1749px;
-
-  }
-
 
   .impala-info {
     z-index: 3;
@@ -198,16 +244,13 @@ h1 {
   }
 
   .car-info-card {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
     width: 300px;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #000;
     padding: 25px;
-    margin-bottom: 300px;
-    margin-right: 800px;
+    margin-right: 900px;
   }
 
   .brand-text,
@@ -215,19 +258,32 @@ h1 {
   .year-text {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
     justify-content: center;
-    gap: 18px;
+    align-items: center;
+    gap: 20px;
   }
 
-  h2 {
-    color: rgb(219, 75, 75);
+  .card-header {
+    color: rgb(252, 252, 252);
+    font-size: 24px;
+
   }
 
-  span {
+  p {
     color: rgb(236, 241, 245);
     font-size: 20px;
   }
+
+  /*text-animation*/
+  .new {
+    color: rgb(106, 212, 216);
+    font-size: 20px;
+
+  }
+
+  /* .car-info-text {
+    color: #f39;
+  } */
 
 }
 
