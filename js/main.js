@@ -5,11 +5,11 @@ function onComplete() {
 
   animation.to(".container", { backgroundColor: "black", ease: "power3.inOut", duration: 2 }, "+=1.75")
 
-  animation.to(".container", { display: "none", ease: "back", duration: 1.75 }, "+=1");
+  animation.to(".container", { display: "none", ease: "back", duration: 1.25 }, "+=0.5");
 
   let tl = gsap.timeline();
 
-  tl.to(".effect", { opacity: 1, visibility: "visible", display: "block", ease: "back(2)", duration: 1.5 }, "+=4.75"); // visibility'yi visible yapıyoruz
+  tl.to(".effect", { opacity: 1, visibility: "visible", display: "block", ease: "back(2)", duration: 1.75 }, "+=4.25"); // visibility'yi visible yapıyoruz
   tl.to(".car-text", {
     text: "IMPALA",
     duration: 2.5,
