@@ -3,30 +3,31 @@
 function onComplete() {
   let animation = gsap.timeline();
 
-  animation.to(".container", { backgroundColor: "black", ease: "power3.inOut", duration: 2 }, "+=1.75")
+  animation.to(".container", { backgroundColor: "black", ease: "power3.inOut", duration: 2 }, "+=2")
 
-  animation.to(".container", { display: "none", ease: "back", duration: 1.25 }, "+=0.5");
+  animation.to(".container", { display: "none", ease: "back", duration: 1 }, "+=0.5");
 
   let tl = gsap.timeline();
 
-  tl.to(".effect", { opacity: 1, visibility: "visible", display: "block", ease: "back(2)", duration: 1.75 }, "+=4.25"); // visibility'yi visible yapıyoruz
+  tl.to(".effect", { opacity: 1, visibility: "visible", display: "block", ease: "back(2)", duration: 1.75 }, "+=5.5"); // visibility'yi visible yapıyoruz
   tl.to(".car-text", {
     text: "IMPALA",
     duration: 2.5,
     ease: "power4.inOut",
-  }, ">");
+  }, "-=1.25");
 
   tl.from("h1", { scale: 0.03, duration: 3, ease: "power1.inOut" }, "+=1");
   tl.to(".blendImage, .bg", { scale: 1, duration: 2 }, "+=1");
   tl.to(".dark", { opacity: 0, duration: 4 }, ">-=100%");
   tl.to(".impala-info ", { opacity: 1, duration: 1 });
-  tl.to(".car-info-card", { display: "block", opacity: 1, duration: 1.5, ease: "power2.inOut" }); // Sonra opacity'yi animasyonla arttır
+  tl.to(".car-info-card", { display: "block", opacity: 1, duration: 1.5, ease: "power2.inOut" }, "-=0.25"); // Sonra opacity'yi animasyonla arttır
 
   let t = gsap.timeline();
 
+  t.to(".car-info-card", { boxShadow: "0 0 20px 10px rgba(49, 47, 47, 0.6)", duration: 1.5, ease: "power2.inOut" })
   t.to(".car-info-text-brand", { display: "block", opacity: 1 })
-  t.to(".car-info-text-model", { display: "block", opacity: 1, duration: 0.5 })
-  t.to(".car-info-text-year", { display: "block", opacity: 1, duration: 0.5 })
+  t.to(".car-info-text-model", { display: "block", opacity: 1, duration: 0.75 })
+  t.to(".car-info-text-year", { display: "block", opacity: 1, duration: 0.75 })
 
   t = gsap.to(".car-info-text-brand", {
     scrambleText: {
@@ -57,8 +58,6 @@ function onComplete() {
     },
     duration: 3, ease: "none"
   }, "-=2.5");
-
-
 }
 
 function init() {
@@ -70,7 +69,6 @@ function init() {
   gsap.to(".car-info-text-brand", { opacity: 0, display: "none" });
   gsap.to(".car-info-text-model", { opacity: 0, display: "none" });
   gsap.to(".car-info-text-year", { opacity: 0, display: "none" });
-
   onComplete();
 }
 
